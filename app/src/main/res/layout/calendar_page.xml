@@ -1,12 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ff2e4381">
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/NavMenu" />
+        android:id="@+id/NavMenu"
+        android:background="@drawable/layout_border" />
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Upcoming Events"
+        android:id="@+id/textView4"
+        android:textColor="#ffffffff"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop = "12dp"
+                android:layout_marginBottom = "12dp"
+                android:layout_marginLeft = "20dp"
+                android:layout_marginRight = "20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onFirstClick"
+                android:background="@drawable/layout_border"
+                android:clickable="true"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="LAN Party"
+                    android:id="@+id/textView"
+                    android:textSize="35dp"
+                    android:paddingRight="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/textView2"
+                    android:layout_weight="0.35"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="December 5th"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="LAN Party at the UC.  Bring your own devices and cables.  Free Pizza!"
+                    android:id="@+id/textView8" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onFirstClick"
+                android:background="@drawable/layout_border"
+                android:clickable="true"
+                android:weightSum="1"
+                android:id="@+id/linearLayout">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="League Match"
+                    android:id="@+id/textView3"
+                    android:textSize="35dp"
+                    android:paddingRight="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/textView5"
+                    android:layout_weight="0.35"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="December 15th"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Collegiate Star League match.  Watch the match live on Twitch"
+                    android:id="@+id/textView9" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onFirstClick"
+                android:background="@drawable/layout_border"
+                android:clickable="true"
+                android:weightSum="1"
+                android:id="@+id/linearLayout2">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Tournament"
+                    android:id="@+id/textView6"
+                    android:textSize="35dp"
+                    android:paddingRight="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/textView7"
+                    android:layout_weight="0.35"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="December 20th"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Leage of Legends tournament at the UC.  There will be pizza and prizes!"
+                    android:id="@+id/textView10" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
