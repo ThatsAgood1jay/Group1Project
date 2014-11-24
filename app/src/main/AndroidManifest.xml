@@ -16,6 +16,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SocialMediaPage"
+            android:label="SocialMediaPage">
+
+            </activity>
+        <activity
+            android:name=".AboutUsPage"
+            android:label="AboutUsPage">
+        </activity>
+        <activity
+                android:name=".BlogPage"
+                android:label="BlogPage">
+        </activity>
+        <activity
+                android:name=".CalendarPage"
+                android:label="CalendarPage">
+        </activity>
+
     </application>
 
 </manifest>
