@@ -82,14 +82,28 @@ public class SocialMediaPage extends Activity {
         items.add(new StackItem("Home Site", this.getResources().getDrawable(R.drawable.bg)));
 
         StackAdapter adapt = new StackAdapter(this, R.layout.item, items);
+        stk.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-        
+            public void onItemClick(AdapterView<?> a, View v, int position, long id) {
+
+                Log.d("inside on item", "click listener");
+
+
+                if (a.getSelectedItem().toString().contains("Facebook")) {
+
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/groups/utarlingtonsc2/?fref=ts"));
+                    startActivity(i);
+                }
+
+            }
+        });
+
 
         stk.setAdapter(adapt);
         stk.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 
-            public void onItemSelected(AdapterView parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                Log.d("inside method","in on item selected");
 

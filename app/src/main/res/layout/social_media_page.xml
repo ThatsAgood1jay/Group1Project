@@ -22,12 +22,4 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/TestText"
-        android:layout_below="@+id/NavMenu"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="284dp" />
 </RelativeLayout>
