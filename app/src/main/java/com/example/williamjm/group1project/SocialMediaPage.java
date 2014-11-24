@@ -67,42 +67,61 @@ public class SocialMediaPage extends Activity {
 
         final ArrayList<StackItem> items = new ArrayList<StackItem>();
         //remember to make drawables for this!
-        items.add(new StackItem("Twitch.tv", this.getResources().getDrawable(R.drawable.twitch)));
-        items.add(new StackItem(" ", null));
+        items.add(new StackItem("Twitch.tv", this.getResources().getDrawable(R.drawable.twitchpng)));
 
-        items.add(new StackItem("Youtube", this.getResources().getDrawable(R.drawable.youtube)));
-        items.add(new StackItem(" ", null));
+        items.add(new StackItem("Youtube", this.getResources().getDrawable(R.drawable.youtube2)));
 
         items.add(new StackItem("Facebook", this.getResources().getDrawable(R.drawable.facebook)));
-        items.add(new StackItem(" ", null));
 
         items.add(new StackItem("CSL Standings", this.getResources().getDrawable(R.drawable.cslbanner)));
-        items.add(new StackItem(" ", null));
 
         items.add(new StackItem("Home Site", this.getResources().getDrawable(R.drawable.bg)));
 
-        StackAdapter adapt = new StackAdapter(this, R.layout.item, items);
-        stk.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        final StackAdapter adapt = new StackAdapter(this, R.layout.item, items);
 
+        stk.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
 
                 Log.d("inside on item", "click listener");
 
+                StackItem st = adapt.getItem(position);
 
-                if (a.getSelectedItem().toString().contains("Facebook")) {
+                if (st.getText().contains("Facebook")) {
 
                     Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/groups/utarlingtonsc2/?fref=ts"));
                     startActivity(i);
+                }
+
+                else if (st.getText().contains(("Twitch.tv"))) {
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://http://www.twitch.tv/shadow_smile"));
+                    startActivity(i);
+                }
+
+                else if (st.getText().contains(("Youtube"))) {
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=Pi98hDxfFDM"));
+                    startActivity(i);
+                }
+
+                else if (st.getText().contains(("CSL Standings"))) {
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.cstarleague.com/lol/teams/1833"));
+                    startActivity(i);
+                }
+
+                else if (st.getText().contains(("Home Site"))) {
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://mavorgs.collegiatelink.net/organization/esports"));
+                    startActivity(i);
+                }
+
+                else if (a.getSelectedItem().toString().contains(null))
+                {
+
                 }
 
             }
         });
 
 
-        stk.setAdapter(adapt);
         stk.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                Log.d("inside method","in on item selected");
@@ -138,6 +157,8 @@ public class SocialMediaPage extends Activity {
                 //Do Stuff
             }
         });
+
+        stk.setAdapter(adapt);
     }
 
     @Override
