@@ -16,8 +16,14 @@ public class StackItem {
         this.text = text;
     }
 
-    @Override
-    public String toString() {
-        return text;
+    public String getText()
+    {
+        return this.text;
     }
+
+
+    public String toString() {
+        return this.text;
+    }
+
 }
