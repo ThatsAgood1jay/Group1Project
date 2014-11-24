@@ -4,5 +4,8 @@
     <string name="app_name">Group1Project</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="first_blog">\nThis is the official blog for the University of Texas at Arlington\'s eSports team.</string>
+    <string name="second_blog">\nWe will be playing Dota at the UC tomorrow at 6:00 pm.  Come and join us!.</string>
+    <string name="third_blog">\nIf you’re interested in joining UTA’s official eSports team, here’s the link.</string>
 
 </resources>

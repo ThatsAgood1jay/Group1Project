@@ -2,6 +2,7 @@ package com.example.williamjm.group1project;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -59,6 +60,21 @@ public class BlogPage extends Activity {
                     }
                 };
         spinny.setOnItemSelectedListener(onSpinner);
+    }
+    public void onFirstClick(View v)
+    {
+        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://nicfars.wordpress.com/2014/11/24/uta-esports/"));
+        startActivity(i);
+    }
+    public void onSecondClick(View v)
+    {
+        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://nicfars.wordpress.com/2014/11/24/dota-at-uc/"));
+        startActivity(i);
+    }
+    public void onThirdClick(View v)
+    {
+        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://nicfars.wordpress.com/2014/11/24/join-us/"));
+        startActivity(i);
     }
 
     @Override

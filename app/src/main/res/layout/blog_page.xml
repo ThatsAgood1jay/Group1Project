@@ -8,4 +8,156 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/NavMenu" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:background="#ff2e4381">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ff3953a1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop = "12dp"
+                android:layout_marginBottom = "12dp"
+                android:layout_marginLeft = "20dp"
+                android:layout_marginRight = "20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onFirstClick"
+                android:background="@drawable/layout_border"
+                android:clickable="true"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/pic1" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="UTA eSports"
+                    android:id="@+id/textView3"
+                    android:textSize="35dp"
+                    android:paddingRight="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/first_blog"
+                    android:id="@+id/textView4"
+                    android:layout_weight="0.35"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop = "12dp"
+                android:layout_marginBottom = "12dp"
+                android:layout_marginLeft = "20dp"
+                android:layout_marginRight = "20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onSecondClick"
+                android:background="@drawable/layout_border"
+                android:clickable="true"
+                android:weightSum="1"
+                android:id="@+id/linearLayout"
+                android:paddingTop="30dp">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/pic2" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Dota at UC"
+                    android:id="@+id/textView"
+                    android:textSize="35dp"
+                    android:paddingRight="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/second_blog"
+                    android:id="@+id/textView2"
+                    android:layout_weight="0.35"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onThirdClick"
+                android:background="@drawable/layout_border"
+                android:clickable="true"
+                android:weightSum="1"
+                android:id="@+id/linearLayout2"
+                android:paddingTop="30dp" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/joystiq" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Join us"
+                    android:id="@+id/textView5"
+                    android:textSize="35dp"
+                    android:paddingRight="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/third_blog"
+                    android:id="@+id/textView6"
+                    android:layout_weight="0.35"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
