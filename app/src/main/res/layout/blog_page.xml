@@ -7,7 +7,8 @@
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/NavMenu" />
+        android:id="@+id/NavMenu"
+        android:background="@drawable/layout_border" />
 
     <ScrollView
         android:layout_width="match_parent"
