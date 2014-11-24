@@ -4,12 +4,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.StackView;
 
@@ -21,54 +21,46 @@ import java.util.ArrayList;
  */
 public class SocialMediaPage extends Activity {
 
-    EditText TestText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.social_media_page);
 
-        TestText = (EditText) findViewById(R.id.TestText);
-
-        String[] country={"Nav Menu","About Team Blaze","Blog", "Upcoming Events", "Home"};
-        ArrayAdapter<String> stringArrayAdapter=
+        String[] country = {"Nav Menu", "About Team Blaze", "Blog", "Upcoming Events", "Home"};
+        ArrayAdapter<String> stringArrayAdapter =
                 new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, country);
 
-        Spinner spinny = (Spinner)  findViewById(R.id.NavMenu);
+        Spinner spinny = (Spinner) findViewById(R.id.NavMenu);
         spinny.setAdapter(stringArrayAdapter);
 
         AdapterView.OnItemSelectedListener onSpinner =
                 new AdapterView.OnItemSelectedListener() {
+
                     @Override
-                    public void onItemSelected(AdapterView<?> parent,View view,int position,long id)
-                    {
-                        if (parent.getSelectedItem().toString().contains("About Team Blaze"))
-                        {
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        if (parent.getSelectedItem().toString().contains("About Team Blaze")) {
                             Intent i = new Intent(parent.getContext(), AboutUsPage.class);
                             startActivity(i);
-                        }
-                        else if(parent.getSelectedItem().toString().contains("Blog"))
-                        {
+                        } else if (parent.getSelectedItem().toString().contains("Blog")) {
                             Intent i = new Intent(parent.getContext(), BlogPage.class);
                             startActivity(i);
-                        }
-                        else if(parent.getSelectedItem().toString().contains("Upcoming Events"))
-                        {
+                        } else if (parent.getSelectedItem().toString().contains("Upcoming Events")) {
                             Intent i = new Intent(parent.getContext(), CalendarPage.class);
                             startActivity(i);
-                        }
-                        else if(parent.getSelectedItem().toString().contains("Home"))
-                        {
+                        } else if (parent.getSelectedItem().toString().contains("Home")) {
                             Intent i = new Intent(parent.getContext(), MyActivity.class);
                             startActivity(i);
                         }
                     }
+
                     @Override
-                    public void onNothingSelected( AdapterView<?>  parent)
-                    {
+                    public void onNothingSelected(AdapterView<?> parent) {
                         return;
                     }
                 };
+
         spinny.setOnItemSelectedListener(onSpinner);
 
         StackView stk = (StackView) this.findViewById(R.id.stackView1);
@@ -91,21 +83,23 @@ public class SocialMediaPage extends Activity {
 
         StackAdapter adapt = new StackAdapter(this, R.layout.item, items);
 
+        
+
         stk.setAdapter(adapt);
         stk.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
-            @Override
+
             public void onItemSelected(AdapterView parent, View view, int position, long id) {
 
+               Log.d("inside method","in on item selected");
 
-                if (parent.getSelectedItem().toString().equals("Facebook")) {
-                    TestText.setText("Facebook");
+                if (parent.getSelectedItem().toString().contains("Facebook")) {
 
                     Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/groups/utarlingtonsc2/?fref=ts"));
                     startActivity(i);
                 }
 
-                else if (parent.getSelectedItem().toString().contains("Twitch.tv")) {
+            /*    else if (parent.getSelectedItem().toString().contains("Twitch.tv")) {
                     Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://http://www.twitch.tv/shadow_smile"));
                     startActivity(i);
                 }
@@ -123,17 +117,14 @@ public class SocialMediaPage extends Activity {
                 else if (parent.getSelectedItem().toString().contains("Home Site")) {
                     Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://mavorgs.collegiatelink.net/organization/esports"));
                     startActivity(i);
-                }
+                }*/
             }
-
             @Override
             public void onNothingSelected(AdapterView parent) {
                 //Do Stuff
             }
         });
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
