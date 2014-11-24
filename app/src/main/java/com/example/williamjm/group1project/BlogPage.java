@@ -37,9 +37,9 @@ public class BlogPage extends Activity {
                             Intent i = new Intent(parent.getContext(), MyActivity.class);
                             startActivity(i);
                         }
-                        else if(parent.getSelectedItem().toString().contains("Blog"))
+                        else if(parent.getSelectedItem().toString().contains("About Us"))
                         {
-                            Intent i= new Intent(parent.getContext(), BlogPage.class);
+                            Intent i= new Intent(parent.getContext(), AboutUsPage.class);
                             startActivity(i);
                         }
                         else if(parent.getSelectedItem().toString().contains("Upcoming Events"))
