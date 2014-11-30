@@ -8,16 +8,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 
-/**
- * Created by user on 11/12/14.
- */
+
 public class AboutUsPage extends Activity {
+
+
+    String memberArray[] = {"Courtney Austin","Jorge Bilbao","Drew Charles","Kennedy Eubanks","Gred Gainey","Colten Gober",
+            "Julian Harris", "Nathan Hawkins", "Kevin Hervey", "Johnny Hill", "Lonnie McClanahan", "Erick Neal"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.about_us);
+
+        final ListView listView = (ListView) findViewById(R.id.memberListView);
 
         String[] pages={"Nav Menu","Blog","Home","Upcoming Events", "Social Media"};
         ArrayAdapter<String> stringArrayAdapter=
@@ -59,6 +64,11 @@ public class AboutUsPage extends Activity {
                     }
                 };
         spinny.setOnItemSelectedListener(onSpinner);
+
+
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, memberArray);
+        listView.setAdapter(adapter);
     }
 
     @Override

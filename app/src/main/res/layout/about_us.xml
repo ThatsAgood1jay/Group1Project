@@ -2,12 +2,74 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ff2e4381">
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/NavMenu"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="#ffffffff" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/NavMenu"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="About Us"
+            android:id="@+id/aboutUsText"
+            android:layout_marginLeft="0dp"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="170dp"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/imageView"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/aboutUsImage" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="157dp"
+                android:text="The Texas–Arlington Mavericks (abbreviated UTA, and Mavs) are the athletic teams that represent the University of Texas at Arlington. The Mavericks compete in the NCAA Division I Sun Belt Conference in 14 varsity sports."
+                android:id="@+id/descriptionText"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="right" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Members"
+            android:id="@+id/memberText"
+            android:layout_gravity="center_horizontal" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="171dp"
+            android:id="@+id/memberListView"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="2.73"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="12dp"
+            android:divider="#ffff00a6" />
+
+    </LinearLayout>
+
 </RelativeLayout>
