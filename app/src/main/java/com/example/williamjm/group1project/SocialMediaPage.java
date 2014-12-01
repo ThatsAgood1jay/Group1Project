@@ -93,7 +93,7 @@ public class SocialMediaPage extends Activity {
                 }
 
                 else if (st.getText().contains(("Twitch.tv"))) {
-                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://http://www.twitch.tv/shadow_smile"));
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.twitch.tv/shadow_smile/profile"));
                     startActivity(i);
                 }
 

@@ -40,7 +40,7 @@
                 android:layout_height="160dp"
                 android:id="@+id/imageView"
                 android:layout_marginLeft="20dp"
-                android:src="@drawable/aboutUsImage" />
+                android:src="@drawable/aboutusimage" />
 
             <TextView
                 android:layout_width="match_parent"
